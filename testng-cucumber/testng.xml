@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SmokeOnly_DataDriven_Parallel"
+       parallel="methods"
+       thread-count="3"
+       data-provider-thread-count="3">
+
+  <test name="Run_Only_DataDriven_Smoke_Test">
+    <classes>
+      <class name="assignment.SmokeTests">
+        <methods>
+          <include name="smokeLoginDataDriven"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+
+</suite>
